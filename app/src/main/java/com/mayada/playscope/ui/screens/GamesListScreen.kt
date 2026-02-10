@@ -31,7 +31,6 @@ fun GamesScreen(
 
     Column(modifier = Modifier.fillMaxSize()) {
 
-        // Search Bar
         OutlinedTextField(
             value = state.query,
             onValueChange = viewModel::onSearchQueryChange,
@@ -42,7 +41,6 @@ fun GamesScreen(
             singleLine = true
         )
 
-        // ✅ Genre Filter Row
         if (state.genres.isNotEmpty()) {
             GenreFilterRow(
                 genres = state.genres,
